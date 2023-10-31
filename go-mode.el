@@ -74,6 +74,3 @@
   (defadvice! +ginkgo--+go/test-single-a ()
     :override #'+go/test-single
     (+ginkgo--+go/test-single)))
-
-;; (setq flycheck-golangci-lint-deadline "10m"
-;;       flycheck-golangci-lint-fast t)
