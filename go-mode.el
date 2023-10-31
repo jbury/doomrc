@@ -53,7 +53,6 @@
     :documentation #'godoc-at-point))
 
 (after! (:or go-mode go-ts-mode)
-  (add-hook 'go-mode-hook #'format-all-mode)
   (setq gofmt-command 'goimports)
 
   ;; I use advice for the below because there are a couple of other commands

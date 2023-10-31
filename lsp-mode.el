@@ -4,9 +4,9 @@
   (add-hook 'yaml-ts-mode-hook #'lsp!))
 
 (after! lsp-mode
-;  (setq! read-process-output-max (* 1024 1024)
-;         company-idle-delay 1
-;         company-minimum-prefix-length 3)
+  (setq! read-process-output-max (* 1024 1024)
+         company-idle-delay 1
+         company-minimum-prefix-length 3)
 
   (setq! +lsp-company-backends 'company-capf)
 
