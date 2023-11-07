@@ -37,3 +37,10 @@
    which-key-replacement-alist
    '(("" . "\\`+?evil[-:]?\\(?:a-\\)?\\(.*\\)") . (nil . "◂\\1"))
    '(("\\`g s" . "\\`evilem--?motion-\\(.*\\)") . (nil . "◃\\1"))))
+
+;; https://github.com/emacs-lsp/lsp-mode/issues/2255
+(defface lsp-flycheck-info-unnecessary
+  '((t))
+  "Face which apply to side line for symbols not used.
+Possibly erroneously redundant of lsp-flycheck-info-unnecessary-face."
+  :group 'lsp-ui-sideline)
