@@ -5,7 +5,7 @@
 
 (after! lsp-mode
   (setq! read-process-output-max (* 1024 1024)
-         company-idle-delay 1
+         company-idle-delay 0.3
          company-minimum-prefix-length 3)
 
   (setq! +lsp-company-backends 'company-capf)
