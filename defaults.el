@@ -14,7 +14,6 @@
        x-stretch-cursor nil                            ; DO NOT make the cursor match the size of the glyph
        backup-by-copying t                             ; copy backup files don't copy the original
        display-line-numbers-type t                     ; line numbers GOOD actually?!?
-       confirm-kill-emacs nil                          ; Did I stutter?
        show-trailing-whitespace t)                     ; I don't like trailing whitespace
 
 ;; make sure I can move through words
