@@ -44,8 +44,8 @@
    '(("gopls.completeUnimported" t t)
      ("gopls.staticcheck" t t)))
 
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.devenv\\'"))
-
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.devenv\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "result"))
 
 (after! (:and lsp-mode treemacs-mode lsp-treemacs)
   (lsp-treemacs-sync-mode 1))
