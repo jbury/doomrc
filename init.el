@@ -145,7 +145,12 @@
        ;;nim               ; python + lisp at the speed of c
        (nix +lsp)          ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
-       org                 ; organize your plain life in plain text
+       (org 							 ; organize your plain life in plain text
+       	 +brain
+       	 +pandoc
+       	 +pomodoro
+       	 +pretty
+       	 +roam2)
        ;;php               ; perl's insecure younger brother
        plantuml            ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
