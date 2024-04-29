@@ -10,6 +10,7 @@
 
 (load! "defaults")
 (load! "go-mode")
+(load! "java-mode")
 (load! "lsp-mode")
 
 

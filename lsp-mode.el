@@ -4,27 +4,29 @@
   (add-hook 'yaml-ts-mode-hook #'lsp!))
 
 (after! lsp-mode
-  (setq! read-process-output-max (* 1024 1024)
-         company-idle-delay 0.3
-         company-minimum-prefix-length 3)
-
-  (setq! +lsp-company-backends 'company-capf)
-
   (setq! lsp-log-io nil
          lsp-enable-suggest-server-download nil
          lsp-enable-symbol-highlighting nil
          lsp-response-timeout 120
-         lsp-modeline-diagnostics-scope :workspace
-         lsp-terraform-ls-enable-show-reference t
+         lsp-modeline-diagnostics-scope :workspace)
+
+  ;; Company
+  (setq! read-process-output-max (* 1024 1024)
+         company-idle-delay 0.3
+         company-minimum-prefix-length 3
+         +lsp-company-backends 'company-capf)
+
+  ;; Terraform
+  (setq! lsp-terraform-ls-enable-show-reference t
          lsp-terraform-ls-prefill-required-fields t
          lsp-terraform-ls-validate-on-save t)
 
+	;; GoLang
   (setq! lsp-go-goimports-local "gitlab.com/flexe"
          lsp-go-use-gofumpt t
          lsp-go-use-placeholders nil
          lsp-diagnostics-provider :auto)
 
-  ;; :json-false
   (setq! lsp-go-codelenses '((gc_details . t) (generate . t) (regenerate_cgo . t) (run_govulncheck . t)
                              (test . t) (tidy . t) (upgrade_dependency . t) (vendor . t))
 
@@ -43,6 +45,7 @@
   (lsp-register-custom-settings
    '(("gopls.completeUnimported" t t)
      ("gopls.staticcheck" t t)))
+  ;; End GoLang
 
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.devenv\\'")
   (add-to-list 'lsp-file-watch-ignored-directories "result"))
